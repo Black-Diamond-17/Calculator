@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calc">
+    <div class="display">
+      <div class="viewport">
+        <div id="error"></div>
+        <input class="top view" id="topView" disabled>
+        <input class="bottom view" id="bottomView" value="0" disabled>
+      </div>
+      <div class="functions">
+        <button class="btn function trig sin">sin</button>
+        <button class="btn function trig cos">cos</button>
+        <button class="btn function trig tan">tan</button>
+        <button class="btn function trig log">log</button>
+        <button class="btn bracket operator function" value="(">(</button>
+        <button class="btn bracket operator function" value=")">)</button>
+        <!--<button class="btn function hyp">hyp</button>
+        <button class="btn function exp" value="**">&#8730;n</button>
+        <button class="btn function root">n^</button>
+        <button class="btn function combination">&comp;</button>
+        <button class="btn function permutation">&percnt;</button>
+        <button class="btn function opp">Opp</button>-->
+      </div>
+      <div class="pad">
+        <div class="numpad">
+          <button class="btn number" value="1">1</button>
+          <button class="btn number" value="2">2</button>
+          <button class="btn number" value="3">3</button>
+          <button class="btn number" value="4">4</button>
+          <button class="btn number" value="5">5</button>
+          <button class="btn number" value="6">6</button>
+          <button class="btn number" value="7">7</button>
+          <button class="btn number" value="8">8</button>
+          <button class="btn number" value="9">9</button>
+          <button class="btn number" value="0">0</button>
+          <button class="btn number" value="00">00</button>
+          <button class="btn number" value=".">.</button>
+        </div>
+        <div class="operator-pad">
+          <button class="btn ac special">AC</button>
+          <button class="btn del special">DEL</button>
+          <button class="btn plus sign operator" value="+">+</button>
+          <button class="btn times sign operator" value="*">&times;</button>
+          <button class="btn minus sign operator" value="-">&minus;</button>
+          <button class="btn divide sign operator" value="/">&divide;</button>
+          <button class="btn ans">Ans</button>
+          <button class="btn equals" id="equals">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="demo"></div>
+  <script src="calculator.js"></script>
+</body>
+</html>

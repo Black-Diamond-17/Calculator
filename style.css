@@ -1,0 +1,121 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(47, 47, 47);
+}
+@font-face {
+  font-family: 'sevenSegment';
+  src: url('/seven_segment/SevenSegment.ttf') format('truetype');
+}
+.calc{
+  width: 200px;
+  border: 1px solid black;
+  padding: 15px;
+  background-color: rgb(75, 87, 82);
+  border-radius: 10px;
+  transform: scale(1.5);
+  transition: all 200ms;
+}
+.viewport{
+  width: 200px;
+  height: 70px;
+  background-color: rgb(156, 202, 188);
+  justify-self: center;
+  box-shadow: 0px 0px 5px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  overflow-x:hidden;
+}
+.view{
+  padding: 0px 3px;
+  border: none;
+  background-color: inherit;
+  outline: none;
+  /*font-family: 'sevenSegment';*/
+}
+.top{
+  display: flex;
+  width: 100%;
+  height: 35%;
+  align-items: center;
+  font-size: larger;
+}
+input:disabled{color: black;}
+input::selection{background-color: rgba(0, 255, 0, 0.389);}
+.bottom{
+  border: none;
+  width: 90%;
+  height: 30%;
+  text-align: right;
+  font-size: x-large;
+  overflow: hidden;
+  position: relative;
+  left: 10px;
+  top: 20px;
+}
+
+.pad{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.numpad, .operator-pad{
+  display: grid;
+  gap: 2px;
+  padding-top: 10px;
+}
+.numpad{
+  grid-template-columns: repeat(3, 1fr);
+}
+.operator-pad{
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 8px;
+}
+.special{background-color: red;}
+.functions{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 3px;
+}
+.btn{
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(20, 20, 20, 0.713);}
+.btn:not(.function){
+  height: 30px;
+}
+.btn:active{
+  box-shadow: 0px 0px;
+  transform: translateY(2px);
+  transition: linear 30ms;
+}
+button:hover{opacity: 0.9;}
+
+#demo{
+  background-color: white;
+  color: black;
+  height: 50px;
+  width: 150px;
+  z-index: 9;
+  position: absolute;
+  bottom: 0;
+}
+.view::-webkit-scrollbar {
+  height: 4px;
+}
+.view::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 2px;
+}
+#error{
+  width: inherit;
+  height: 65px;
+  position: absolute;
+  border-radius: inherit;
+  background-color: rgb(255, 159, 159);
+  color: red;
+  z-index: 1;
+  display: none;
+}
